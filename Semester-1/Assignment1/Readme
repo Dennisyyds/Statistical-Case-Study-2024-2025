@@ -1,1 +1,44 @@
+# README
+
+## Project Overview
+
+This project consists of four R scripts and a dataset used for data analysis to write a report about Stylometry. Each script serves a different purpose, contributed by Rongzhi Chen, Shizhao Xiong and Jingqi He, from Univeristy of Edinburgh, including one file provided by a lectruer of this course, Gordon J. Ross. The dataset used in these analyses is also included.
+
+### Files Description
+1. **stylometryfunctions.R**  
+   This file was provided by  Gordon J. Ross. and contains specific functions for performing stylometric analysis. These functions are called by the other scripts to evaluate and analyze patterns within the data.
+
+2. **Visualization.R**  
+   This script handles data visualization. It produces graphical representations of the analysis, providing insights into the findings through charts and plots.
+
+3.**Methodology.R**  
+   This script outlines the results we get by using KNN, discriminant and RandomForest.
+
+4. **FutureCheck.R**  
+   This script focuses on a core part of the analysis. It includes N-cross validation to check the accuracy of the methodlogy we used.
+
+
+### Dataset
+
+The dataset used in this project is uploaded along with these scripts. Ensure that the dataset is placed in the correct directory for the scripts to access and analyze the data seamlessly.
+
+### Usage Instructions
+
+1. Install necessary R packages before running the scripts. Commonly required libraries might include:
+   - `ggplot2`
+   - `lattice`
+   - `tidyverse`
+   - Other specific libraries as mentioned within each script.
+
+2. Run the scripts in the following recommended order:
+   - `stylometryfunctions.R` 
+   - `Visualization.R` 
+   - `Methodology.R` 
+   - `FutureCheck.R` 
+
+3. The scripts generate output files such as graphs or processed data, which should be saved in the same working directory. These outputs will be used in generating the final report.
+
+### License
+
+This project is meant for academic purposes only. Please provide appropriate attribution to the contributors if using or modifying the scripts.
 
