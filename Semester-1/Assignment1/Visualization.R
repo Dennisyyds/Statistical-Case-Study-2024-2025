@@ -45,21 +45,18 @@ grid()
 
 ##############################################################
 #plot each book
-x <- NULL
-for (i in 1:length(M$features)){
-  for (j in 1:nrow(M$features[[i]])){
-    x <- rbind(x,M$features[[i]][j,])
-  }
-}
+Need <- c(3,4,6,7,9,10,11)
 colorlist<-c()
+x <- NULL
 z = 0
-for (i in 1:length(M$features)){
+for (i in Need){
   for (j in 1:nrow(M$features[[i]])){
-    z = z+1
-    colorlist[z] = i
+      x <- rbind(x,M$features[[i]][j,])
+      z = z+1
+      colorlist[z] = i
   }
 }
-
+print(colorlist)
 for (i in 1:nrow(x)) { x[i,] <- x[i,] / sum(x[i,]) }
 
 for (j in 1:ncol(x)) { x[,j] <- (x[,j] - mean(x[,j]))/sd(x[,j]) }
@@ -74,8 +71,10 @@ plot(pts, type = 'n', main = "Visualizing Similarities Among All Books",
 
 # Add text labels with color coding based on author
 text(pts[, 1], pts[, 2], labels = 1:nrow(x), 
-     col = rainbow(length(M$features))[colorlist], 
-     cex = 1, pos = 3, font = 2)
+     col = colorlist, 
+     cex = 0.7, pos = 3, font = 2)
+
+legend("topright", legend = c("MaryAndPercy","Mary", "Percy","PercyPoetry","Unknown","WalterScott","WilliamGodwin"), col = Need,pch=20,cex = 0.5)
 # Add grid lines for better readability
 grid()
 
