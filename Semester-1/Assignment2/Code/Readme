@@ -1,0 +1,73 @@
+# README
+
+## Project Overview
+
+This project consists of 13 R scripts designed for stylometric analysis and classification of ChatGPT-generated essays versus human-authored essays. Used to extract key stylistic features for analysis. Each script serves a different purpose, contributed by Rongzhi Chen, Shizhao Xiong and Jingqi He, from Univeristy of Edinburgh, including one files provided by a lecturer of this course, Gordon J. Ross.
+
+### Files Description
+
+1.**Determine Function Words.R**
+Identifies function words with significant differences in frequency between ChatGPT and human-authored texts. Then perform cross-validation using these three function words.
+
+2.**Different k for KNN.R**
+Tests various values of k for the K-Nearest Neighbors (KNN) classifier to determine the optimal parameter for improving classification accuracy.
+
+3.**Except topic.R**
+Conducts analysis using training data that excludes essays from the same topic as the test data to assess generalization capabilities.
+
+4.**Except_only_topic.R**
+Similar to Except topic.R, but focuses exclusively on excluding essays from a specific topic for targeted testing.
+
+5.**Form_of_data.R**
+Compare the performance from 10-fold cross-validations using combined dataset and Separate dataset
+
+6.**OnlyTopic.R**
+Performs classification using only essays from the same topic as the test data to evaluate the impact of topic-specific training data.
+
+7.r**educewords.R**
+Provided by the lecturer, used to trim the essays down to a specified word count.
+
+8.**Set Up.R**
+Initializes the environment and loads necessary packages, datasets, and configurations required for running the analyses.
+
+9.**stylometryfunctions.R**
+Contains all the important stylometric functions used throughout the project for feature extraction and statistical analysis.
+
+10.**Test parameter of SVM.R**
+Evaluates the performance of the SVM classifier with different parameter configurations to identify the best settings.
+
+11.**traindata_size.R**
+Examines the impact of varying training data sizes on classifier performance, including accuracy, recall, precision, and F1 scores.
+
+12.**Visualization.R**
+Generates MDS plot to illustrate classification performance, function word distributions, and other analytical results.
+
+13.**WordLength.R**
+Analyzes how essay length impacts classifier performance and evaluates classifiers’ ability to handle varying text lengths.
+
+### Usage Instructions
+
+Start by running Set Up.R to load required packages and initialize the environment.
+Depending on your objective, run the relevant scripts:
+For visualization, use Visualization.R
+For study 1, use form_of_data.R
+For study 2, use Different k for KNN.R or Test parameter of SVM.R
+For study 4, use Determine Function Words.R
+For study 5, use traindata_size.R
+For study 6, use Except topic.R, Except_only_topic.R and OnlyTopic.R
+
+
+Notes
+
+1. Install necessary R packages before running the scripts. Commonly required libraries might include:
+   - `ggplot2`
+   - `lattice`
+   - `tidyverse`
+   - `caret`
+   - `writexl`
+
+2. The scripts generate output files such as graphs or processed data, which should be saved in the same working directory. These outputs will be used in generating the final report.
+
+### License
+
+This project is meant for academic purposes only. Please provide appropriate attribution to the contributors if using or modifying the scripts.
